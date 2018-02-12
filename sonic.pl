@@ -11,15 +11,15 @@ use Cwd;
 if(!$ARGV[0])
 {
         print "Usage: perl sonic.pl <query> <google-search> \n";
-        print "perl $0 \"Powered by your mom\" www.google.com\n";
+        print "perl $0 \"Powered by your basement server\" www.google.com\n";
         print "Now please enter your query: ";
         $param0=<STDIN>;
 }
 
 if(!$ARGV[1]) {
         print "perl $0 <query> <google-host>\n";
-        print "perl $0 \"Powered by your mom\" www.google.com\n";
-        print "Stand by for a list of google engines:..\n";
+        print "perl $0 \"Powered by your basement server\" www.google.com\n";
+        print "Stand by for a list of google engines across the globe:..\n";
         $i=0;
         while ($i < scalar(@google))
         {
@@ -29,9 +29,9 @@ if(!$ARGV[1]) {
                 $i++;               
         }
 
-print "\nJust press the number of the Search Engine you are going to use and then press ENTER: ";
-$aux=<STDIN>;
-$param1 = $google[$aux];
+        print "\nJust press the number of the Search Engine you are going to use and then press ENTER: ";
+        $aux=<STDIN>;
+        $param1 = $google[$aux];
 }
 else
 {
@@ -58,18 +58,18 @@ else {
         @results = $response->as_string;
         $results= "@results";
 
-while($results =~ m/<a class=l href=\"(.*?)\">.*?<\/a>/g)
-{
+                while($results =~ m/<a class=l href=\"(.*?)\">.*?<\/a>/g)
+                {
 
-        $results1 =~ s/<a class=l href=\"(.*?)\"> .*?<\/a>/$1/;
-        $host =$1;
-        print "$host\n";
-        #open (OUT, ">>scan_results.txt");
-        print OUT "$host\n";
-        close(OUT);
-}
+                        $results1 =~ s/<a class=l href=\"(.*?)\"> .*?<\/a>/$1/;
+                        $host =$1;
+                        print "$host\n";
+                        # open (OUT, ">>results.txt");
+                        print OUT "$host\n";
+                        close(OUT);
+                }
 
-$a = $a + 10;
+        $a = $a + 10;
      }
 
 }
@@ -82,7 +82,7 @@ print "done\n";
 # print $results;
 print "Results saved to report.html\n";
 
-# find and display links
+# find and list links from the search result
 my $mech = WWW::Mechanize->new();
 my $cwd = cwd();
 $mech->get("file://$cwd/report.html");

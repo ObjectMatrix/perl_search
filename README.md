@@ -3,10 +3,10 @@
 ```bash
 
 Usage: perl sonic.pl <query> <google-search>
-perl ./sonic.pl "Powered by your mom" www.google.com
+perl ./sonic.pl "Powered by your basement server" www.google.com
 Now please enter your query: Larry Page
 perl ./sonic.pl <query> <google-host>
-perl ./sonic.pl "Powered by your mom" www.google.com
+perl ./sonic.pl "Powered by your basement server" www.google.com
 Stand by for a list of google engines:..
 0. www.google.com  (U.S)             1. www.google.ae   (Emiratos Arabes)   2. www.google.at   (Austria)
 3. www.google.be   (Belgica)         4. www.google.ca   (Canada)          5. www.google.ch   (Suiza)
